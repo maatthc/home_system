@@ -1,0 +1,428 @@
+{
+  "id" : 1,
+  "name" : "Alex's Home Systems",
+  "description" : "Documentation of services running at home",
+  "lastModifiedDate" : "2023-06-15T12:24:55Z",
+  "lastModifiedAgent" : "structurizr-javascript",
+  "properties" : {
+    "structurizr.dsl" : "d29ya3NwYWNlICJBbGV4J3MgSG9tZSBTeXN0ZW1zIiAiRG9jdW1lbnRhdGlvbiBvZiBzZXJ2aWNlcyBydW5uaW5nIGF0IGhvbWUiIHsKICAgIG1vZGVsIHsKICAgICAgICB1c2VyID0gcGVyc29uICJBbGV4IiB7CiAgICAgICAgICAgIHRhZ3MgIk1pY3Jvc29mdCBBenVyZSAtIEJ1ZyIKICAgICAgICB9CgogICAgICAgIGhvc3QgPSBzb2Z0d2FyZVN5c3RlbSAiSG9zdCIgewogICAgICAgICAgICBkZXNjcmlwdGlvbiAiRGViaWFuIEdOVS9MaW51eCAxMSAoQnVsbHNleWUpIC0gRGVsbCBBbGllbndhcmUgMTQiCiAgICAgICAgICAgIHRhZ3MgIk1pY3Jvc29mdCBBenVyZSAtIE5ldHdvcmsgSW50ZXJmYWNlcyIKCiAgICAgICAgICAgIGRvY2tlciA9IGNvbnRhaW5lciAiRG9ja2VyIiB7CiAgICAgICAgICAgICAgICB0ZWNobm9sb2d5ICJEb2NrZXIiCiAgICAgICAgICAgICAgICBkZXNjcmlwdGlvbiAiQSBjb250YWluZXIgZnJhbWV3b3JrIgogICAgICAgICAgICAgICAgdGFncyAiTWljcm9zb2Z0IEF6dXJlIC0gQ29udGFpbmVyIFNlcnZpY2VzIChEZXByZWNhdGVkKSIKICAgICAgICAgICAgfQogICAgICAgICAgICBzdG9yYWdlID0gY29udGFpbmVyICJTdG9yYWdlIiB7CiAgICAgICAgICAgICAgICB0ZWNobm9sb2d5ICJEaXNrIgogICAgICAgICAgICAgICAgZGVzY3JpcHRpb24gIlNTRCBhdCAvaG9tZS9tYWF0L3R2IgogICAgICAgICAgICAgICAgdGFncyAiTWljcm9zb2Z0IEF6dXJlIC0gRGlza3MiCiAgICAgICAgICAgIH0KICAgICAgICB9CgogICAgICAgIGhvbWVTeXRlbSA9IHNvZnR3YXJlU3lzdGVtICJIb21lIFN5c3RlbSIgewogICAgICAgICAgICBkZXNjcmlwdGlvbiAiRW50ZXJ0YWlubWVudCwgc2VjdXJpdHkgYW5kIHV0aWxpdGllcy4iCiAgICAgICAgICAgIHRhZ3MgIk1pY3Jvc29mdCBBenVyZSAtIFdlYnNpdGUgUG93ZXIiCiAgICAgICAgICAgIAogICAgICAgICAgICBwaWhvbGUgPSBjb250YWluZXIgIlBpaG9sZSIgewogICAgICAgICAgICAgICAgZGVzY3JpcHRpb24gIkEgYmxhY2sgaG9sZSBmb3IgSW50ZXJuZXQgYWR2ZXJ0aXNlbWVudHMgIgogICAgICAgICAgICAgICAgdGVjaG5vbG9neSAiSmF2YSIKICAgICAgICAgICAgICAgIHRhZ3MgIk1pY3Jvc29mdCBBenVyZSAtIEROUyBab25lcyIKICAgICAgICAgICAgICAgIHVybCAiaHR0cDovL3R2LmhvbWU6ODA4MC9hZG1pbi9sb2dpbi5waHAiCiAgICAgICAgICAgIH0KICAgICAgICAgICAgCiAgICAgICAgICAgIGp1cHl0ZXJsYWJzID0gY29udGFpbmVyICJKdXB5dGVyIExhYnMiIHsKICAgICAgICAgICAgICAgIGRlc2NyaXB0aW9uICJEZXZlbG9wbWVudCBlbnZpcm9ubWVudCBmb3Igbm90ZWJvb2tzLCBjb2RlLCBhbmQgZGF0YSIKICAgICAgICAgICAgICAgIHRhZ3MgIk1pY3Jvc29mdCBBenVyZSAtIENvZGUiCiAgICAgICAgICAgICAgICB1cmwgImh0dHA6Ly90di5ob21lOjg4ODgvbGFiLyIKICAgICAgICAgICAgfQogICAgICAgICAgICAKICAgICAgICAgICAgc3RydWN0dXJpenIgPSBjb250YWluZXIgIlN0cnVjdHVyaXpyIiB7CiAgICAgICAgICAgICAgICBkZXNjcmlwdGlvbiAiQzQgbW9kZWwgZm9yIHZpc3VhbGlzaW5nIHNvZnR3YXJlIGFyY2hpdGVjdHVyZSIKICAgICAgICAgICAgICAgIHRhZ3MgIk1pY3Jvc29mdCBBenVyZSAtIERhc2hib2FyZCIKICAgICAgICAgICAgICAgIHVybCAiaHR0cDovL3R2LmhvbWU6ODA2Ni93b3Jrc3BhY2UvZGlhZ3JhbXMiCiAgICAgICAgICAgIH0KICAgICAgICAgICAgCiAgICAgICAgICAgIGhvbWVBc3Npc3RhbnQgPSBjb250YWluZXIgIkhvbWUgQXNzaXN0YW50IiB7CiAgICAgICAgICAgICAgICBkZXNjcmlwdGlvbiAiSG9tZSBBdXRvbWF0aW9uLyBJb1QiCiAgICAgICAgICAgICAgICB0YWdzICJNaWNyb3NvZnQgQXp1cmUgLSBJb1QgSHViIgogICAgICAgICAgICAgICAgdXJsICJodHRwOi8vdHYuaG9tZTo4MTIzLyIKICAgICAgICAgICAgfQogICAgICAgICAgICAKICAgICAgICAgICAgbWVkaWFTZXJ2ZXIgPSBjb250YWluZXIgIk1lZGlhU2VydmVyIiB7CiAgICAgICAgICAgICAgICBkZXNjcmlwdGlvbiAiTWVkaWEgU2VydmVyIgogICAgICAgICAgICAgICAgdGFncyAiTWljcm9zb2Z0IEF6dXJlIC0gSW1hZ2VzIgoKICAgICAgICAgICAgICAgIGplbGx5ZmluID0gY29tcG9uZW50ICJKZWxseWZpbiIgewogICAgICAgICAgICAgICAgICAgIGRlc2NyaXB0aW9uICJNZWRpYSBTZXJ2ZXIiCiAgICAgICAgICAgICAgICAgICAgdGFncyAiTWljcm9zb2Z0IEF6dXJlIC0gSW1hZ2VzIgogICAgICAgICAgICAgICAgICAgIHVybCAiaHR0cDovL3R2LmhvbWU6ODA5Ni93ZWIvaW5kZXguaHRtbCIKICAgICAgICAgICAgICAgIH0KCiAgICAgICAgICAgICAgICBqYWNrZXR0ID0gY29tcG9uZW50ICJKYWNrZXR0IiB7CiAgICAgICAgICAgICAgICAgICAgZGVzY3JpcHRpb24gIlByb3h5IHNlcnZlciB0aGF0IHRyYW5zbGF0ZXMgcXVlcmllcyBpbnRvIHRyYWNrZXItc2l0ZS1zcGVjaWZpYyIKICAgICAgICAgICAgICAgICAgICB0YWdzICJNaWNyb3NvZnQgQXp1cmUgLSBSZXNvdXJjZSBHcm91cCBMaXN0IgogICAgICAgICAgICAgICAgICAgIHVybCAiaHR0cDovL3R2LmhvbWU6OTExNy9VSS9EYXNoYm9hcmQiCiAgICAgICAgICAgICAgICB9CgogICAgICAgICAgICAgICAgc29uYXJyID0gY29tcG9uZW50ICJTb25hcnIiIHsKICAgICAgICAgICAgICAgICAgICBkZXNjcmlwdGlvbiAiU21hcnQgUFZSIGZvciBuZXdzZ3JvdXAgYW5kIGJpdHRvcnJlbnQgdXNlcnMiCiAgICAgICAgICAgICAgICAgICAgdGFncyAiTWljcm9zb2Z0IEF6dXJlIC0gRGV2aWNlIFByb3Zpc2lvbmluZyBTZXJ2aWNlcyIKICAgICAgICAgICAgICAgICAgICB1cmwgImh0dHA6Ly90di5ob21lOjg5ODkvIgogICAgICAgICAgICAgICAgfQoKICAgICAgICAgICAgICAgIHRyYW5zbWlzc2lvbiA9IGNvbXBvbmVudCAiVHJhbnNtaXNzaW9uIiB7CiAgICAgICAgICAgICAgICAgICAgZGVzY3JpcHRpb24gIlRvcnJlbnQgY2xpZW50IgogICAgICAgICAgICAgICAgICAgIHRhZ3MgIk1pY3Jvc29mdCBBenVyZSAtIERvd25sb2FkIgogICAgICAgICAgICAgICAgICAgIHVybCAiaHR0cDovL3R2LmhvbWU6OTA5MS90cmFuc21pc3Npb24vd2ViLyIKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgfQoKICAgICAgICB9CgogICAgICAgIHVzZXIgLT4gaG9tZVN5dGVtICJVc2VzIgogICAgICAgIGhvbWVTeXRlbSAtPiBob3N0ICJSdW5zIG9uIgogICAgICAgIHVzZXIgLT4gcGlob2xlICJRdWVyaWVzIEROUyIKICAgICAgICB1c2VyIC0+IGp1cHl0ZXJsYWJzICJDcmVhdGVzIE5vdGVib29rIgogICAgICAgIHVzZXIgLT4gc3RydWN0dXJpenIgIkNyZWF0ZSBEb2NzIgogICAgICAgIHVzZXIgLT4gaG9tZUFzc2lzdGFudCAiQXV0b21hdGUgZGV2aWNlcyIKICAgICAgICB1c2VyIC0+IGplbGx5ZmluICJXYXRjaGVzIFRWIgogICAgICAgIGplbGx5ZmluIC0+IHNvbmFyciAiUHVsbHMgbWVkaWEiCiAgICAgICAgc29uYXJyIC0+IHRyYW5zbWlzc2lvbiAiVHJpZ2dlcnMgZG93bmxvYWQiCiAgICAgICAgc29uYXJyIC0+IGphY2tldHQgIlNlYXJjaGVzIGVwaXNvZGUiCgogICAgICAgICMgaG9zdCA9IGRlcGxveW1lbnRFbnZpcm9ubWVudCAiRGV2ZWxvcG1lbnQiIHsKICAgICAgICAjICAgICBkZXBsb3ltZW50Tm9kZSAiRGV2ZWxvcGVyIExhcHRvcCIgewogICAgICAgICMgICAgICAgICBjb250YWluZXJJbnN0YW5jZSBwaWhvbGUKICAgICAgICAjICAgICAgICAgY29udGFpbmVySW5zdGFuY2Ugc29uYXJyCiAgICAgICAgIyAgICAgfQogICAgICAgICMgfQogICAgfQoKICAgIHZpZXdzIHsKICAgICAgICBzeXN0ZW1Db250ZXh0IGhvbWVTeXRlbSB7CiAgICAgICAgICAgIGluY2x1ZGUgKgogICAgICAgICAgICBhdXRvTGF5b3V0IGxyCiAgICAgICAgfQogICAgICAgIGNvbnRhaW5lciBob21lU3l0ZW0gewogICAgICAgICAgICBpbmNsdWRlICoKICAgICAgICAgICAgYXV0b0xheW91dAogICAgICAgIH0KICAgICAgICBjb21wb25lbnQgbWVkaWFTZXJ2ZXIgewogICAgICAgICAgICBpbmNsdWRlICoKICAgICAgICAgICAgYXV0b0xheW91dCBscgogICAgICAgIH0KICAgICAgICAKICAgICAgICAjIGRlcGxveW1lbnQgKiBob3N0IHsKICAgICAgICAjICAgICBpbmNsdWRlICoKICAgICAgICAjICAgICBhdXRvTGF5b3V0IGxyCiAgICAgICAgIyB9CgogICAgICAgIGNvbnRhaW5lciBob3N0IHsKICAgICAgICAgICAgaW5jbHVkZSAqCiAgICAgICAgICAgIGF1dG9MYXlvdXQgbHIKICAgICAgICB9CiAgICAgICAgIyBzeXN0ZW1Db250ZXh0IGhvc3QgewogICAgICAgICMgICAgIGluY2x1ZGUgKgogICAgICAgICMgICAgIGF1dG9MYXlvdXQgbHIKICAgICAgICAjIH0KICAgICAgICAKICAgICAgICBzdHlsZXMgewogICAgICAgICAgICBlbGVtZW50ICJQZXJzb24iIHsKICAgICAgICAgICAgICAgIHNoYXBlIFBlcnNvbgogICAgICAgICAgICB9CiAgICAgICAgICAgIAogICAgICAgICAgICBlbGVtZW50ICJFbGVtZW50IiB7CiAgICAgICAgICAgICAgICBiYWNrZ3JvdW5kICNmZmZmZmYKICAgICAgICAgICAgICAgIHNoYXBlIFJvdW5kZWRCb3gKICAgICAgICAgICAgfQogICAgICAgICAgICAKICAgICAgICAgICAgcmVsYXRpb25zaGlwICJSZWxhdGlvbnNoaXAiIHsKICAgICAgICAgICAgICAgIGNvbG9yICNmZjAwMDAKICAgICAgICAgICAgICAgIGRhc2hlZCBmYWxzZQogICAgICAgICAgICB9CgogICAgICAgIH0KCiAgICAgICAgIyB0aGVtZSBodHRwczovL3N0YXRpYy5zdHJ1Y3R1cml6ci5jb20vdGhlbWVzL2FtYXpvbi13ZWItc2VydmljZXMtMjAyMC4wNC4zMC90aGVtZS5qc29uCiAgICAgICAgdGhlbWUgaHR0cHM6Ly9zdGF0aWMuc3RydWN0dXJpenIuY29tL3RoZW1lcy9taWNyb3NvZnQtYXp1cmUtMjAyMS4wMS4yNi90aGVtZS5qc29uCiAgICAgICAgIyB0aGVtZSAuL21pY3Jvc29mdC10aGVtZS5qc29uCgogICAgICAgIGJyYW5kaW5nIHsKICAgICAgICAgICAgIyBsb2dvIGxvZ28uanBnCiAgICAgICAgICAgIGxvZ28gaHR0cHM6Ly9pLmliYi5jby9mcW5MR21yL2RhcmstcmFiYml0LmpwZwogICAgICAgICAgICAjIGZvbnQgPG5hbWU+IFt1cmxdCiAgICAgICAgfQogICAgfQoKfQo="
+  },
+  "configuration" : { },
+  "model" : {
+    "people" : [ {
+      "id" : "1",
+      "tags" : "Element,Person,Microsoft Azure - Bug",
+      "properties" : {
+        "structurizr.dsl.identifier" : "user"
+      },
+      "name" : "Alex",
+      "relationships" : [ {
+        "id" : "15",
+        "tags" : "Relationship",
+        "sourceId" : "1",
+        "destinationId" : "5",
+        "description" : "Uses"
+      }, {
+        "id" : "20",
+        "tags" : "Relationship",
+        "sourceId" : "1",
+        "destinationId" : "9",
+        "description" : "Automate devices"
+      }, {
+        "id" : "21",
+        "tags" : "Relationship",
+        "sourceId" : "1",
+        "destinationId" : "11",
+        "description" : "Watches TV"
+      }, {
+        "id" : "18",
+        "tags" : "Relationship",
+        "sourceId" : "1",
+        "destinationId" : "7",
+        "description" : "Creates Notebook"
+      }, {
+        "id" : "22",
+        "sourceId" : "1",
+        "destinationId" : "10",
+        "description" : "Watches TV",
+        "linkedRelationshipId" : "21"
+      }, {
+        "id" : "17",
+        "tags" : "Relationship",
+        "sourceId" : "1",
+        "destinationId" : "6",
+        "description" : "Queries DNS"
+      }, {
+        "id" : "19",
+        "tags" : "Relationship",
+        "sourceId" : "1",
+        "destinationId" : "8",
+        "description" : "Create Docs"
+      } ],
+      "location" : "Unspecified"
+    } ],
+    "softwareSystems" : [ {
+      "id" : "2",
+      "tags" : "Element,Software System,Microsoft Azure - Network Interfaces",
+      "properties" : {
+        "structurizr.dsl.identifier" : "host"
+      },
+      "name" : "Host",
+      "description" : "Debian GNU/Linux 11 (Bullseye) - Dell Alienware 14",
+      "location" : "Unspecified",
+      "containers" : [ {
+        "id" : "3",
+        "tags" : "Element,Container,Microsoft Azure - Container Services (Deprecated)",
+        "properties" : {
+          "structurizr.dsl.identifier" : "docker"
+        },
+        "name" : "Docker",
+        "description" : "A container framework",
+        "technology" : "Docker",
+        "documentation" : { }
+      }, {
+        "id" : "4",
+        "tags" : "Element,Container,Microsoft Azure - Disks",
+        "properties" : {
+          "structurizr.dsl.identifier" : "storage"
+        },
+        "name" : "Storage",
+        "description" : "SSD at /home/maat/tv",
+        "technology" : "Disk",
+        "documentation" : { }
+      } ],
+      "documentation" : { }
+    }, {
+      "id" : "5",
+      "tags" : "Element,Software System,Microsoft Azure - Website Power",
+      "properties" : {
+        "structurizr.dsl.identifier" : "homesytem"
+      },
+      "name" : "Home System",
+      "description" : "Entertainment, security and utilities.",
+      "relationships" : [ {
+        "id" : "16",
+        "tags" : "Relationship",
+        "sourceId" : "5",
+        "destinationId" : "2",
+        "description" : "Runs on"
+      } ],
+      "location" : "Unspecified",
+      "containers" : [ {
+        "id" : "6",
+        "tags" : "Element,Container,Microsoft Azure - DNS Zones",
+        "url" : "http://tv.home:8080/admin/login.php",
+        "properties" : {
+          "structurizr.dsl.identifier" : "pihole"
+        },
+        "name" : "Pihole",
+        "description" : "A black hole for Internet advertisements",
+        "technology" : "Java",
+        "documentation" : { }
+      }, {
+        "id" : "8",
+        "tags" : "Element,Container,Microsoft Azure - Dashboard",
+        "url" : "http://tv.home:8066/workspace/diagrams",
+        "properties" : {
+          "structurizr.dsl.identifier" : "structurizr"
+        },
+        "name" : "Structurizr",
+        "description" : "C4 model for visualising software architecture",
+        "documentation" : { }
+      }, {
+        "id" : "7",
+        "tags" : "Element,Container,Microsoft Azure - Code",
+        "url" : "http://tv.home:8888/lab/",
+        "properties" : {
+          "structurizr.dsl.identifier" : "jupyterlabs"
+        },
+        "name" : "Jupyter Labs",
+        "description" : "Development environment for notebooks, code, and data",
+        "documentation" : { }
+      }, {
+        "id" : "10",
+        "tags" : "Element,Container,Microsoft Azure - Images",
+        "properties" : {
+          "structurizr.dsl.identifier" : "mediaserver"
+        },
+        "name" : "MediaServer",
+        "description" : "Media Server",
+        "components" : [ {
+          "id" : "14",
+          "tags" : "Element,Component,Microsoft Azure - Download",
+          "url" : "http://tv.home:9091/transmission/web/",
+          "properties" : {
+            "structurizr.dsl.identifier" : "transmission"
+          },
+          "name" : "Transmission",
+          "description" : "Torrent client",
+          "documentation" : { }
+        }, {
+          "id" : "11",
+          "tags" : "Element,Component,Microsoft Azure - Images",
+          "url" : "http://tv.home:8096/web/index.html",
+          "properties" : {
+            "structurizr.dsl.identifier" : "jellyfin"
+          },
+          "name" : "Jellyfin",
+          "description" : "Media Server",
+          "relationships" : [ {
+            "id" : "23",
+            "tags" : "Relationship",
+            "sourceId" : "11",
+            "destinationId" : "13",
+            "description" : "Pulls media"
+          } ],
+          "documentation" : { }
+        }, {
+          "id" : "13",
+          "tags" : "Element,Component,Microsoft Azure - Device Provisioning Services",
+          "url" : "http://tv.home:8989/",
+          "properties" : {
+            "structurizr.dsl.identifier" : "sonarr"
+          },
+          "name" : "Sonarr",
+          "description" : "Smart PVR for newsgroup and bittorrent users",
+          "relationships" : [ {
+            "id" : "25",
+            "tags" : "Relationship",
+            "sourceId" : "13",
+            "destinationId" : "12",
+            "description" : "Searches episode"
+          }, {
+            "id" : "24",
+            "tags" : "Relationship",
+            "sourceId" : "13",
+            "destinationId" : "14",
+            "description" : "Triggers download"
+          } ],
+          "documentation" : { }
+        }, {
+          "id" : "12",
+          "tags" : "Element,Component,Microsoft Azure - Resource Group List",
+          "url" : "http://tv.home:9117/UI/Dashboard",
+          "properties" : {
+            "structurizr.dsl.identifier" : "jackett"
+          },
+          "name" : "Jackett",
+          "description" : "Proxy server that translates queries into tracker-site-specific",
+          "documentation" : { }
+        } ],
+        "documentation" : { }
+      }, {
+        "id" : "9",
+        "tags" : "Element,Container,Microsoft Azure - IoT Hub",
+        "url" : "http://tv.home:8123/",
+        "properties" : {
+          "structurizr.dsl.identifier" : "homeassistant"
+        },
+        "name" : "Home Assistant",
+        "description" : "Home Automation/ IoT",
+        "documentation" : { }
+      } ],
+      "documentation" : { }
+    } ]
+  },
+  "documentation" : { },
+  "views" : {
+    "systemContextViews" : [ {
+      "key" : "SystemContext-001",
+      "order" : 1,
+      "softwareSystemId" : "5",
+      "dimensions" : {
+        "width" : 2300,
+        "height" : 800
+      },
+      "automaticLayout" : {
+        "implementation" : "Graphviz",
+        "rankDirection" : "LeftRight",
+        "rankSeparation" : 300,
+        "nodeSeparation" : 300,
+        "edgeSeparation" : 0,
+        "vertices" : false
+      },
+      "enterpriseBoundaryVisible" : true,
+      "elements" : [ {
+        "id" : "1",
+        "x" : 200,
+        "y" : 200
+      }, {
+        "id" : "2",
+        "x" : 1650,
+        "y" : 250
+      }, {
+        "id" : "5",
+        "x" : 900,
+        "y" : 250
+      } ],
+      "relationships" : [ {
+        "id" : "16"
+      }, {
+        "id" : "15"
+      } ]
+    } ],
+    "containerViews" : [ {
+      "key" : "Container-001",
+      "order" : 2,
+      "softwareSystemId" : "5",
+      "paperSize" : "A3_Landscape",
+      "dimensions" : {
+        "width" : 4108,
+        "height" : 1520
+      },
+      "automaticLayout" : {
+        "implementation" : "Graphviz",
+        "rankDirection" : "TopBottom",
+        "rankSeparation" : 300,
+        "nodeSeparation" : 300,
+        "edgeSeparation" : 0,
+        "vertices" : false
+      },
+      "externalSoftwareSystemBoundariesVisible" : true,
+      "elements" : [ {
+        "id" : "1",
+        "x" : 1854,
+        "y" : 208
+      }, {
+        "id" : "6",
+        "x" : 2579,
+        "y" : 908
+      }, {
+        "id" : "7",
+        "x" : 1829,
+        "y" : 908
+      }, {
+        "id" : "8",
+        "x" : 1079,
+        "y" : 908
+      }, {
+        "id" : "9",
+        "x" : 329,
+        "y" : 908
+      }, {
+        "id" : "10",
+        "x" : 3329,
+        "y" : 908
+      } ],
+      "relationships" : [ {
+        "id" : "18"
+      }, {
+        "id" : "17"
+      }, {
+        "id" : "22",
+        "vertices" : [ {
+          "x" : 3179,
+          "y" : 804
+        } ]
+      }, {
+        "id" : "20",
+        "vertices" : [ {
+          "x" : 929,
+          "y" : 804
+        } ]
+      }, {
+        "id" : "19"
+      } ]
+    }, {
+      "key" : "Container-002",
+      "order" : 4,
+      "softwareSystemId" : "2",
+      "paperSize" : "A6_Portrait",
+      "dimensions" : {
+        "width" : 1108,
+        "height" : 1558
+      },
+      "automaticLayout" : {
+        "implementation" : "Graphviz",
+        "rankDirection" : "LeftRight",
+        "rankSeparation" : 300,
+        "nodeSeparation" : 300,
+        "edgeSeparation" : 0,
+        "vertices" : false
+      },
+      "externalSoftwareSystemBoundariesVisible" : true,
+      "elements" : [ {
+        "id" : "3",
+        "x" : 329,
+        "y" : 329
+      }, {
+        "id" : "4",
+        "x" : 329,
+        "y" : 929
+      } ]
+    } ],
+    "componentViews" : [ {
+      "key" : "Component-001",
+      "order" : 3,
+      "paperSize" : "A4_Landscape",
+      "dimensions" : {
+        "width" : 3170,
+        "height" : 1558
+      },
+      "automaticLayout" : {
+        "implementation" : "Graphviz",
+        "rankDirection" : "LeftRight",
+        "rankSeparation" : 300,
+        "nodeSeparation" : 300,
+        "edgeSeparation" : 0,
+        "vertices" : false
+      },
+      "containerId" : "10",
+      "externalContainerBoundariesVisible" : true,
+      "elements" : [ {
+        "id" : "11",
+        "x" : 908,
+        "y" : 629
+      }, {
+        "id" : "12",
+        "x" : 2408,
+        "y" : 929
+      }, {
+        "id" : "1",
+        "x" : 208,
+        "y" : 579
+      }, {
+        "id" : "13",
+        "x" : 1658,
+        "y" : 629
+      }, {
+        "id" : "14",
+        "x" : 2408,
+        "y" : 329
+      } ],
+      "relationships" : [ {
+        "id" : "25"
+      }, {
+        "id" : "24"
+      }, {
+        "id" : "23"
+      }, {
+        "id" : "21"
+      } ]
+    } ],
+    "configuration" : {
+      "branding" : {
+        "logo" : "https://i.ibb.co/fqnLGmr/dark-rabbit.jpg"
+      },
+      "styles" : {
+        "elements" : [ {
+          "tag" : "Person",
+          "shape" : "Person"
+        }, {
+          "tag" : "Element",
+          "background" : "#ffffff",
+          "shape" : "RoundedBox"
+        } ],
+        "relationships" : [ {
+          "tag" : "Relationship",
+          "color" : "#ff0000",
+          "dashed" : false
+        } ]
+      },
+      "themes" : [ "https://static.structurizr.com/themes/microsoft-azure-2021.01.26/theme.json" ],
+      "terminology" : { },
+      "metadataSymbols" : "SquareBrackets",
+      "lastSavedView" : "SystemContext-001"
+    }
+  }
+}
