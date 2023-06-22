@@ -1,8 +1,9 @@
-*.log
-.vscode
-homeassistant
-jackett
-jellyfin
-pi-hole
-sonarr
-transmission
+*
+!LICENSE
+!README.md
+!docker-compose.yml
+!.env.example
+!structurizr*
+structurizr/.structurizr/*
+!structurizr/workspace.*
+!structurizr/logo.jpg
