@@ -1,0 +1,134 @@
+version: "3.7"
+
+x-vars:
+  - &TZ
+    TZ=Australia/Melbourne
+  - &DnsRestart
+    restart: always
+    extra_hosts:
+      - "tv.home:${IP}"
+
+services:
+  pihole:
+    container_name: pihole
+    image: pihole/pihole:latest
+    ports:
+      - 53:53/tcp
+      - 53:53/udp
+      - 8080:80/tcp
+    environment:
+      - *TZ
+      - VIRTUAL_HOST=alien
+      - PIHOLE_UID=${UID}
+      - PIHOLE_GID=${UID}
+    volumes:
+      - ./pi-hole/etc-pihole:/etc/pihole
+      - ./pi-hole/etc-dnsmasq.d:/etc/dnsmasq.d
+    <<: *DnsRestart
+
+  jupyter:
+    image: jupyter/minimal-notebook:2023-04-14
+    container_name: jupyterlabs
+    user: ${UID}:${UID}
+    environment:
+      - NB_UID=${UID}
+      - NB_GID=${UID}
+      - *TZ
+    volumes:
+      - ${DIR}/Documents/notebooks/:/home/jovyan/
+    ports:
+      - 8888:8888
+    <<: *DnsRestart
+
+  sonarr:
+    image: lscr.io/linuxserver/sonarr:latest
+    container_name: sonarr
+    environment:
+      - PUID=${UID}
+      - PGID=${UID}
+      - *TZ
+    volumes:
+      - ./sonarr/config:/config
+      - ${DIR}/TV:/tv
+      - ${DIR}/Downloads:/downloads
+    ports:
+      - 8989:8989
+    <<: *DnsRestart
+
+  jackett:
+    image: lscr.io/linuxserver/jackett:latest
+    container_name: jackett
+    environment:
+      - PUID=${UID}
+      - PGID=${UID}
+      - *TZ
+      - AUTO_UPDATE=true
+      - RUN_OPTS= 
+    volumes:
+      - ./jackett/config:/config
+      - ./jackett/downloads:/downloads
+    ports:
+      - 9117:9117
+    <<: *DnsRestart
+
+  transmission:
+    image: lscr.io/linuxserver/transmission:latest
+    container_name: transmission
+    environment:
+      - PUID=${UID}
+      - PGID=${UID}
+      - *TZ
+    volumes:
+      - ./transmission/config:/config
+      - ./transmission/watch:/watch
+      - ${DIR}/TV:/tv
+      - ${DIR}/Downloads:/downloads
+    ports:
+      - 9091:9091
+      - 51413:51413
+      - 51413:51413/udp
+    <<: *DnsRestart
+  
+  jellyfin:
+    image: jellyfin/jellyfin
+    container_name: jellyfin
+    user: ${UID}:${UID}
+    network_mode: 'host'
+    volumes:
+      - ./jellyfin/config:/config
+      - ./jellyfin/cache:/cache
+      - ${DIR}/TV:/media
+    restart: 'always'
+    environment:
+      - JELLYFIN_PublishedServerUrl=
+      - *TZ
+    # Optional - may be necessary for docker healthcheck to pass if running in host network mode
+    extra_hosts:
+      - "host.docker.internal:${IP}"
+      - "tv.home:${IP}"
+  
+  structurizr:
+    image: structurizr/lite
+    container_name: structurizr
+    user: ${UID}:${UID}
+    environment:
+      - PUID=${UID}
+      - PGID=${UID}
+      - *TZ 
+    volumes:
+      - ./structurizr:/usr/local/structurizr  
+    ports:
+      - 8066:8080
+    <<: *DnsRestart
+  
+  homeassistant:
+    container_name: homeassistant
+    image: "ghcr.io/home-assistant/home-assistant:stable"
+    volumes:
+      - ./homeassistant/:/config
+      - /etc/localtime:/etc/localtime:ro
+    environment:
+      - *TZ
+    privileged: true
+    network_mode: host
+    <<: *DnsRestart
