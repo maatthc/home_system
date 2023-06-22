@@ -1,0 +1,8 @@
+*.log
+.vscode
+homeassistant
+jackett
+jellyfin
+pi-hole
+sonarr
+transmission
