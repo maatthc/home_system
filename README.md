@@ -39,6 +39,10 @@ graph TB
   end
 ```
 
+## Repo existing Mermaid file
+
+![C4 Component 001](./structurizr/diagrams/structurizr-Component-001.mmd)
+
 ## structurizr rendered diagram
 
 
