@@ -1,4 +1,6 @@
 # Home System
+
+## Mermaid client-side rendered diagram
 ```mermaid
 
 graph TB
@@ -36,3 +38,9 @@ graph TB
     1-- "<div>Watches TV</div><div style='font-size: 70%'></div>" -->10
   end
 ```
+
+## structurizr rendered diagram
+
+
+![structurizr-80331-Container-001](https://github.com/maatthc/home_system/assets/1077319/6c57f6d8-dce8-4b69-b7ac-b2e3277dc683)
+
