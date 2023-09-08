@@ -132,3 +132,25 @@ services:
     privileged: true
     network_mode: host
     <<: *DnsRestart
+
+  hyperion:
+    image: sirfragalot/hyperion.ng
+    container_name: hyperion
+    volumes:
+      - ./hyperion:/root/.hyperion:rw
+    ports:
+      - target: 19400
+        published: 19400
+        mode: host
+      - target: 19445
+        published: 19445
+        protocol: tcp
+        mode: host
+      - target: 19444
+        published: 19444
+        protocol: tcp
+        mode: host
+      - target: 8090
+        published: 8090
+        protocol: tcp
+    <<: *DnsRestart 
