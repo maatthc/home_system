@@ -154,3 +154,19 @@ services:
         published: 8090
         protocol: tcp
     <<: *DnsRestart 
+
+  esphome:
+    container_name: esphome
+    image: esphome/esphome
+    volumes:
+      - ./esphome/config:/config
+      - /etc/localtime:/etc/localtime:ro
+    privileged: true
+    network_mode: host
+    ports:
+      - 6052:6052
+    devices:
+      - /dev/ttyUSB0:/dev/ttyUSB0
+      - /dev/ttyUSB1:/dev/ttyUSB1
+      - /dev/ttyUSB2:/dev/ttyUSB2
+    <<: *DnsRestart 
