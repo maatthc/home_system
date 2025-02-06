@@ -1,8 +1,7 @@
 version: "3.7"
 
 x-vars:
-  - &TZ
-    TZ=Australia/Melbourne
+  - &TZ TZ=Australia/Melbourne
   - &DnsRestart
     restart: always
     extra_hosts:
@@ -13,9 +12,9 @@ services:
     container_name: pihole
     image: pihole/pihole:latest
     ports:
+      - 8080:80
       - 53:53/tcp
       - 53:53/udp
-      - 8080:80/tcp
     environment:
       - *TZ
       - VIRTUAL_HOST=alien
@@ -27,7 +26,7 @@ services:
     <<: *DnsRestart
 
   jupyter:
-    image: jupyter/minimal-notebook:2023-04-14
+    image: quay.io/jupyter/pyspark-notebook
     container_name: jupyterlabs
     user: ${UID}:${UID}
     environment:
@@ -63,7 +62,7 @@ services:
       - PGID=${UID}
       - *TZ
       - AUTO_UPDATE=true
-      - RUN_OPTS= 
+      - RUN_OPTS=
     volumes:
       - ./jackett/config:/config
       - ./jackett/downloads:/downloads
@@ -81,23 +80,27 @@ services:
     volumes:
       - ./transmission/config:/config
       - ./transmission/watch:/watch
-      - ${DIR}/TV:/tv
       - ${DIR}/Downloads:/downloads
+      - ${DIR}/TV_small/XDANGER:/tv_small/XDANGER
+      - ${DIR}/TV_small/transmission:/incomplete-dir
     ports:
       - 9091:9091
       - 51413:51413
       - 51413:51413/udp
     <<: *DnsRestart
-  
+
   jellyfin:
     image: jellyfin/jellyfin
     container_name: jellyfin
     user: ${UID}:${UID}
     network_mode: 'host'
+    ports:
+      - 8096:8096
     volumes:
       - ./jellyfin/config:/config
       - ./jellyfin/cache:/cache
       - ${DIR}/TV:/media
+      - ${DIR}/TV/Music:/music
     restart: 'always'
     environment:
       - JELLYFIN_PublishedServerUrl=
@@ -106,7 +109,7 @@ services:
     extra_hosts:
       - "host.docker.internal:${IP}"
       - "tv.home:${IP}"
-  
+
   structurizr:
     image: structurizr/lite
     container_name: structurizr
@@ -114,13 +117,13 @@ services:
     environment:
       - PUID=${UID}
       - PGID=${UID}
-      - *TZ 
+      - *TZ
     volumes:
-      - ./structurizr:/usr/local/structurizr  
+      - ./structurizr:/usr/local/structurizr
     ports:
       - 8066:8080
     <<: *DnsRestart
-  
+
   homeassistant:
     container_name: homeassistant
     image: "ghcr.io/home-assistant/home-assistant:stable"
@@ -131,6 +134,9 @@ services:
       - *TZ
     privileged: true
     network_mode: host
+    ports:
+      - 8123:8123
+      - '192.168.0.253:80:80'
     <<: *DnsRestart
 
   hyperion:
@@ -138,22 +144,13 @@ services:
     container_name: hyperion
     volumes:
       - ./hyperion:/root/.hyperion:rw
+    network_mode: host
     ports:
-      - target: 19400
-        published: 19400
-        mode: host
-      - target: 19445
-        published: 19445
-        protocol: tcp
-        mode: host
-      - target: 19444
-        published: 19444
-        protocol: tcp
-        mode: host
-      - target: 8090
-        published: 8090
-        protocol: tcp
-    <<: *DnsRestart 
+      - 8090:8090
+      - 19400:19400
+      - 19445:19445
+      - 19444:19444
+    <<: *DnsRestart
 
   esphome:
     container_name: esphome
@@ -169,4 +166,38 @@ services:
       - /dev/ttyUSB0:/dev/ttyUSB0
       - /dev/ttyUSB1:/dev/ttyUSB1
       - /dev/ttyUSB2:/dev/ttyUSB2
-    <<: *DnsRestart 
+    <<: *DnsRestart
+
+  heimdall:
+    image: lscr.io/linuxserver/heimdall:latest
+    container_name: heimdall
+    environment:
+      - PUID=${UID}
+      - PGID=${UID}
+    volumes:
+      - ./heimdall/:/config
+    ports:
+      - '${IP}:80:80'
+      - 8183:443
+    <<: *DnsRestart
+
+# Proxy server to bypass Cloudflare protection 
+  flaresolverr:
+    image: ghcr.io/flaresolverr/flaresolverr:latest
+    container_name: flaresolverr
+    environment:
+      - LOG_LEVEL=${LOG_LEVEL:-info}
+      - LOG_HTML=${LOG_HTML:-false}
+      - CAPTCHA_SOLVER=${CAPTCHA_SOLVER:-none}
+    ports:
+      - "${PORT:-8191}:8191"
+    <<: *DnsRestart
+
+  new-trackon:
+    image: corralpeltzer/newtrackon
+    container_name: newtrackon
+      #network_mode: host
+    command: --ignore-ipv6 --port 1111 --address=0.0.0.0
+    ports:
+      - 1111:1111
+    <<: *DnsRestart
