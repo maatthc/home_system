@@ -48,3 +48,8 @@ graph TB
 
 ![structurizr-80331-Container-001](https://github.com/maatthc/home_system/assets/1077319/6c57f6d8-dce8-4b69-b7ac-b2e3277dc683)
 
+## How to update Docker images 
+Run:
+
+`docker-compose pull transmission`
+`docker-compose up -d --remove-orphans transmission`
